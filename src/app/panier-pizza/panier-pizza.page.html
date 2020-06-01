@@ -1,0 +1,23 @@
+<ion-header>
+  <ion-toolbar>
+      <ion-buttons slot="start">
+          <ion-button href="/pizza-list" fill="clear" color="medium">
+              <ion-icon name="arrow-back-outline"></ion-icon>
+          </ion-button>
+      </ion-buttons>
+    <ion-title>panierPizza</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+    <ion-list>
+        <ion-item *ngFor="let paniers of panier">
+                <ion-label class="ion-text-wrap">
+                    <ion-label><strong>{{paniers.Nom}}</strong></ion-label>
+                    <ion-label>Prix de la pizza : {{paniers.Prix}} euros</ion-label>
+                    <img src="{{paniers.Photo}}">
+                </ion-label>
+            <ion-button (click)="removePizza(paniers.Id)">Supprimer du panier</ion-button>
+        </ion-item>
+    </ion-list>
+</ion-content>

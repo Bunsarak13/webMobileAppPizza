@@ -1,0 +1,28 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-button href="/pizza-list" fill="clear" color="medium">
+        <ion-icon name="arrow-back-outline"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+    <ion-title>Détail de la pizza</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+
+  <img src="{{photoPizza}}">
+  <p><strong><center>{{Nom}}</center></strong></p>
+  <p>Prix de la pizza : {{Prix}}</p>
+  <ion-list>
+    <ion-item *ngFor="let pizzaLists of pizzaList">
+      <ion-label class="ion-text-wrap">
+
+
+      </ion-label>
+    </ion-item>
+  </ion-list>
+
+  <ion-button (click)="addPanier(Nom,Prix,photoPizza,pizzaId)">Ajout dans le panier</ion-button>
+
+</ion-content>

@@ -1,0 +1,38 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-button href="/home" fill="clear" color="medium">
+        <ion-icon name="arrow-back-outline"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+    <ion-title>Formulaire d'ajout d'une pizza</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+
+  <form (ngSubmit)="submit()">
+    <ion-item>
+      <ion-label position="stacked" color="primary"> Nom de la pizza </ion-label>
+      <ion-input inputmode="text" [(ngModel)]="send.nom" name="nomPizza"></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label position="stacked" color="primary"> Prix </ion-label>
+      <ion-input inputmode="text" [(ngModel)]="send.prix" name="prixPizza"></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label position="stacked" color="primary"> Ingrédients </ion-label>
+      <ion-input inputmode="text"></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label position="stacked" color="primary"> Photo </ion-label>
+      <ion-input inputmode="text" [(ngModel)]="send.photo" name="photo"></ion-input>
+    </ion-item>
+
+    <ion-button expand="block" type="submit" class="ion-no-margin">Valider</ion-button>
+  </form>
+
+</ion-content>
